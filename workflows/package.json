@@ -5,8 +5,7 @@
   "description": "稀土掘金助手：签到、抽奖、沾喜气、消除Bug、海底掘金游戏、自动化工作流。",
   "author": "Derek Li",
   "scripts": {
-    "checkin": "node checkin.js",
-    "seagold": "node seagold.js"
+    "checkin": "node checkin.js"
   },
   "dependencies": {
     "juejin-helper": "^1.6.1",
