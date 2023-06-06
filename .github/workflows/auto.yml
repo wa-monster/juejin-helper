@@ -3,7 +3,7 @@ name: Auto
 on:
   schedule:
     # - cron: "30 22 * * *" # 北京时间上午06:30 
-    - cron: "1 1 17 * * ?" # 北京时间上午17::01:01 
+    - cron: "10 9 * * *" # 北京时间上午17:10  9 + 时差8
   workflow_dispatch:
 
 env:
