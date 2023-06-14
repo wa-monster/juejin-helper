@@ -107,22 +107,22 @@ class CheckIn {
 
     this.luckyValueProbability = getProbabilityOfWinning(this.sumPoint);
 
-    // 收集bug
-    const bugfix = juejin.bugfix();
+    // // 收集bug
+    // const bugfix = juejin.bugfix();
 
-    const competition = await bugfix.getCompetition();
-    const bugfixInfo = await bugfix.getUser(competition);
-    this.userOwnBug = bugfixInfo.user_own_bug;
+    // const competition = await bugfix.getCompetition();
+    // const bugfixInfo = await bugfix.getUser(competition);
+    // this.userOwnBug = bugfixInfo.user_own_bug;
 
-    try {
-      const notCollectBugList = await bugfix.getNotCollectBugList();
-      await bugfix.collectBugBatch(notCollectBugList);
-      this.bugStatus = 1;
-      this.collectBugCount = notCollectBugList.length;
-      this.userOwnBug += this.collectBugCount;
-    } catch (e) {
-      this.bugStatus = 2;
-    }
+    // try {
+    //   const notCollectBugList = await bugfix.getNotCollectBugList();
+    //   await bugfix.collectBugBatch(notCollectBugList);
+    //   this.bugStatus = 1;
+    //   this.collectBugCount = notCollectBugList.length;
+    //   this.userOwnBug += this.collectBugCount;
+    // } catch (e) {
+    //   this.bugStatus = 2;
+    // }
 
     // 调用埋点
     const sdk = juejin.sdk();
